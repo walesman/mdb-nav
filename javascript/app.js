@@ -5,9 +5,7 @@ angular.module('moviesDBApp', ['ngRoute','movieDBControllers','movieDBDirectives
         "apiKey": "35e16679c616a21b9ddebb66272c5902"
     })
 .config(function($routeProvider) {
-		  // use the HTML5 History API
-       // $locationProvider.html5Mode(true);
-
+		 
 		$routeProvider
 		  .when('/popular', {
 		  	templateUrl: 'templates/movies.html',

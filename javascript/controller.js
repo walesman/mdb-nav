@@ -27,7 +27,7 @@ angular.module('movieDBControllers',[])
           console.log('error', error)
         });
 })
-.controller('MovieNowPlayingController',function($scope, $location, MovieListService,myMovieConfig) {
+.controller('MovieNowPlayingController',function($scope, MovieListService,myMovieConfig) {
  $scope.loading = true;
  $scope.title = 'Now Playing Movies'
  var url = myMovieConfig.moviesEndpoint + '/now_playing?api_key=' + myMovieConfig.apiKey;
@@ -39,7 +39,7 @@ angular.module('movieDBControllers',[])
       ).catch(
         function(error) { 
           console.log('error', error);
-          $location.path('/error/'+error.data.status_message+'/'+error.status)
+           
         });
 })
 .controller('MovieTopRatedController',function($scope, MovieListService,myMovieConfig) {
